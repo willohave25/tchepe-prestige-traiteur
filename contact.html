@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Commande – Tchèpe Abidjan | TCHÈPE PRESTIGE</title>
+  <meta name="description" content="Commandez votre tchèpe Abidjan : formulaire rapide, WhatsApp direct, paiement Mobile Money. TCHÈPE PRESTIGE Cocody-Angré, livraison tout Abidjan.">
+  <link rel="canonical" href="https://www.tchepeprestige.com/contact.html">
+  <meta property="og:title" content="Contact & Commande Tchèpe Abidjan – TCHÈPE PRESTIGE">
+  <meta property="og:description" content="Commandez votre tchèpe Abidjan facilement. Formulaire, WhatsApp, Mobile Money disponibles.">
+  <meta property="og:url" content="https://www.tchepeprestige.com/contact.html">
+  <link rel="icon" type="image/png" href="images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- FB_PIXEL_ID --><!-- GA_MEASUREMENT_ID -->
+</head>
+<body data-next-page="index.html">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo/logo-tchepeprestige.png" alt="Logo TCHÈPE PRESTIGE">
+        <span class="nav-logo-text">Tchèpe Prestige</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="offres.html" class="nav-link">Nos Offres</a></li>
+        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+        <li><a href="evenements.html" class="nav-link">Événements</a></li>
+        <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+        <li><a href="actualites.html" class="nav-link">Actualités</a></li>
+        <li><a href="contact.html" class="btn-primary nav-cta active">Commander</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <nav class="nav-drawer" id="navDrawer">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="offres.html" class="nav-link">Nos Offres</a>
+      <a href="entreprise.html" class="nav-link">Entreprise</a>
+      <a href="evenements.html" class="nav-link">Événements</a>
+      <a href="a-propos.html" class="nav-link">À Propos</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="actualites.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="contact.html" class="btn-primary" style="margin-top:16px;text-align:center;">Commander maintenant</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <span>Contact & Commande</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="background:var(--noir-3);">
+    <div class="page-hero-bg">
+      <picture>
+        <source srcset="images/contact/siege-cocody.webp" type="image/webp">
+        <img src="images/contact/siege-cocody.jpg" alt="Siège TCHÈPE PRESTIGE Cocody Abidjan" loading="eager">
+      </picture>
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="separateur">
+        <div class="separateur-ligne"></div>
+        <span class="separateur-texte">Commander</span>
+      </div>
+      <h1>Contact & Commande – Tchèpe Abidjan</h1>
+      <p style="color:var(--gris);margin-top:12px;">Commandez maintenant via WhatsApp ou notre formulaire.</p>
+    </div>
+  </div>
+
+  <!-- SECTION PRINCIPALE : FORMULAIRE + INFOS -->
+  <section class="section">
+    <div class="container">
+      <div class="grille-2" style="gap:64px;align-items:flex-start;">
+
+        <!-- FORMULAIRE COMMANDE -->
+        <div class="reveal">
+          <div class="separateur">
+            <div class="separateur-ligne"></div>
+            <span class="separateur-texte">Formulaire</span>
+          </div>
+          <h2 style="margin-bottom:24px;">Formulaire de Commande Rapide</h2>
+          <form id="formCommande" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="nom">Nom complet *</label>
+              <input type="text" class="form-input" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tel">Téléphone *</label>
+              <input type="tel" class="form-input" id="tel" name="tel" placeholder="+225 XX XX XX XX XX" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="commande">Taille du thermos *</label>
+              <select class="form-select" id="commande" name="commande" required>
+                <option value="">Sélectionner...</option>
+                <option value="5KG – 6 pers. – 6 000 FCFA">5 KG – 6 personnes – 6 000 FCFA</option>
+                <option value="10KG – 12 pers. – 12 000 FCFA">10 KG – 12 personnes – 12 000 FCFA</option>
+                <option value="20KG – 24 pers. – 24 000 FCFA">20 KG – 24 personnes – 24 000 FCFA</option>
+                <option value="30KG – 36 pers. – 36 000 FCFA">30 KG – 36 personnes – 36 000 FCFA</option>
+                <option value="40KG – 50 pers. – 50 000 FCFA">40 KG – 50 personnes – 50 000 FCFA</option>
+                <option value="50KG – 64 pers. – 64 000 FCFA">50 KG – 64 personnes – 64 000 FCFA</option>
+                <option value="70KG – 90 pers. – 90 000 FCFA">70 KG – 90 personnes – 90 000 FCFA</option>
+                <option value="100KG – 130 pers. – 130 000 FCFA">100 KG – 130 personnes – 130 000 FCFA</option>
+              </select>
+            </div>
+            <div class="form-grille">
+              <div class="form-group">
+                <label class="form-label" for="formule">Formule</label>
+                <select class="form-select" id="formule" name="formule">
+                  <option value="Premium">Premium – Classique</option>
+                  <option value="Prestige">Prestige – + garnitures luxe</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="nbPersonnes">Nombre de personnes</label>
+                <input type="number" class="form-input" id="nbPersonnes" name="nbPersonnes" placeholder="Ex: 50" min="1">
+              </div>
+            </div>
+            <div class="form-grille">
+              <div class="form-group">
+                <label class="form-label" for="dateCommande">Date de livraison *</label>
+                <input type="date" class="form-input" id="dateCommande" name="dateCommande" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="localisation">Zone de livraison</label>
+                <select class="form-select" id="localisation" name="localisation">
+                  <option value="Cocody-Angré">Cocody-Angré</option>
+                  <option value="Cocody (autre)">Cocody (autre)</option>
+                  <option value="Plateau">Plateau</option>
+                  <option value="Marcory">Marcory</option>
+                  <option value="Yopougon">Yopougon</option>
+                  <option value="Abobo">Abobo</option>
+                  <option value="Bingerville / Grand-Bassam">Bingerville / Grand-Bassam</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="adresse">Adresse précise</label>
+              <input type="text" class="form-input" id="adresse" name="adresse" placeholder="Rue, quartier, immeuble...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="notes">Notes / précisions</label>
+              <textarea class="form-textarea" id="notes" name="notes" placeholder="Heure de livraison, occasion spéciale..."></textarea>
+            </div>
+            <div class="btn-group">
+              <button type="submit" class="btn-primary" id="btnEnvoyer">Envoyer la commande</button>
+              <button type="button" class="btn-secondary" id="btnWhatsapp" onclick="envoyerWhatsapp()">Via WhatsApp</button>
+            </div>
+            <div class="form-message" id="formCommandeMsg"></div>
+          </form>
+        </div>
+
+        <!-- INFOS CONTACT -->
+        <div class="reveal reveal-delay-1">
+          <div class="separateur">
+            <div class="separateur-ligne"></div>
+            <span class="separateur-texte">Infos</span>
+          </div>
+          <h2 style="margin-bottom:28px;">TCHÈPE PRESTIGE</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icone">📍</div>
+              <div class="contact-detail">
+                <strong>Adresse</strong>
+                <p>Cocody-Angré 8e Tranche, Abidjan<br>12 BP 1717 ABIDJAN 12</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icone">📞</div>
+              <div class="contact-detail">
+                <strong>Téléphone fixe</strong>
+                <a href="tel:+22527222 77410">+225 27 22 277 410</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icone">📱</div>
+              <div class="contact-detail">
+                <strong>WhatsApp / Mobile</strong>
+                <a href="https://wa.me/2250586176086" target="_blank" rel="noopener">+225 05 861 760 86</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icone">✉️</div>
+              <div class="contact-detail">
+                <strong>Email</strong>
+                <a href="mailto:contact@tchepeprestige.com">contact@tchepeprestige.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icone">🌐</div>
+              <div class="contact-detail">
+                <strong>Site web</strong>
+                <a href="https://www.tchepeprestige.com">www.tchepeprestige.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOUTON WHATSAPP DIRECT -->
+          <div style="margin-top:32px;">
+            <a href="https://wa.me/2250586176086?text=Bonjour%20TCHÈPE%20PRESTIGE%2C%20je%20souhaite%20commander%20du%20tchèpe" class="btn-primary" target="_blank" rel="noopener" style="width:100%;text-align:center;display:block;padding:18px;">
+              💬 Commander via WhatsApp — +225 05 861 760 86
+            </a>
+          </div>
+
+          <!-- CARTE / IMAGE LOCALISATION -->
+          <div style="margin-top:28px;">
+            <div class="img-section" style="height:220px;">
+              <picture>
+                <source srcset="images/contact/carte-abidjan.webp" type="image/webp">
+                <img src="images/contact/carte-abidjan.jpg" alt="Localisation TCHÈPE PRESTIGE Cocody-Angré Abidjan" loading="lazy">
+              </picture>
+            </div>
+          </div>
+
+          <!-- SUIVI COMMANDE -->
+          <div style="margin-top:24px;" class="carte">
+            <h4 style="margin-bottom:8px;">📦 Vous avez déjà commandé ?</h4>
+            <p style="color:var(--gris);font-size:14px;margin-bottom:12px;">Suivez votre commande en temps réel avec votre numéro TCP-XXXX.</p>
+            <a href="suivi-commande.html" class="btn-secondary" style="font-size:12px;padding:10px 20px;">Suivre ma commande</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PAIEMENT MOBILE MONEY -->
+  <section class="section section-alt" id="paiement">
+    <div class="container">
+      <div class="section-header center reveal">
+        <div class="separateur" style="justify-content:center">
+          <div class="separateur-ligne"></div>
+          <span class="separateur-texte">Paiement</span>
+          <div class="separateur-ligne"></div>
+        </div>
+        <h2>Paiement Mobile Money</h2>
+        <p style="color:var(--gris);margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto;">
+          Payez facilement avec votre opérateur mobile préféré. Sélectionnez votre opérateur pour voir les instructions détaillées.
+        </p>
+      </div>
+      <div class="mobile-money-grille reveal">
+        <div class="mobile-money-carte" onclick="afficherInstructions('orange')" id="carte-orange">
+          <div class="mobile-money-logo">🟠</div>
+          <div class="mobile-money-nom">Orange Money</div>
+          <small style="color:var(--gris);">Cliquer pour instructions</small>
+        </div>
+        <div class="mobile-money-carte" onclick="afficherInstructions('mtn')" id="carte-mtn">
+          <div class="mobile-money-logo">🟡</div>
+          <div class="mobile-money-nom">MTN MoMo</div>
+          <small style="color:var(--gris);">Cliquer pour instructions</small>
+        </div>
+        <div class="mobile-money-carte" onclick="afficherInstructions('moov')" id="carte-moov">
+          <div class="mobile-money-logo">🔵</div>
+          <div class="mobile-money-nom">Moov Money</div>
+          <small style="color:var(--gris);">Cliquer pour instructions</small>
+        </div>
+        <div class="mobile-money-carte" onclick="afficherInstructions('wave')" id="carte-wave">
+          <div class="mobile-money-logo">🌊</div>
+          <div class="mobile-money-nom">Wave</div>
+          <small style="color:var(--gris);">Cliquer pour instructions</small>
+        </div>
+      </div>
+
+      <!-- Instructions Mobile Money -->
+      <div class="mobile-money-instructions reveal" id="instructionsMobile">
+        <h4 id="instrTitre">Instructions de paiement</h4>
+        <div class="numero-marchand">
+          <p style="color:var(--gris);font-size:12px;margin-bottom:4px;">Numéro marchand TCHÈPE PRESTIGE</p>
+          <strong>+225 05 861 760 86</strong>
+        </div>
+        <div class="mobile-money-etapes" id="instrEtapes"></div>
+        <p style="color:var(--gris);font-size:13px;margin-bottom:16px;">
+          ⚠️ Après votre paiement, envoyez la capture d'écran de votre reçu via WhatsApp pour confirmer votre commande.
+        </p>
+        <a href="#" class="btn-primary" id="instrWhatsapp" target="_blank" rel="noopener">
+          📲 Envoyer le reçu via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-bande">
+    <div class="container">
+      <h2>Commandez votre tchèpe Abidjan maintenant !</h2>
+      <p>Réponse rapide, livraison ponctuelle, qualité premium garantie.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="https://wa.me/2250586176086?text=Bonjour%20TCHÈPE%20PRESTIGE%2C%20je%20souhaite%20commander" class="btn-primary" target="_blank" rel="noopener">WhatsApp Direct</a>
+        <a href="tel:+2250586176086" class="btn-secondary">Appeler maintenant</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grille">
+        <div class="footer-brand">
+          <img src="images/logo/logo-tchepeprestige.png" alt="TCHÈPE PRESTIGE">
+          <p>Traiteur Abidjan leader du tchèpe grande quantité. L'excellence du tchèpe en grande capacité.</p>
+          <a href="https://wa.me/2250586176086" target="_blank" rel="noopener" class="btn-primary" style="font-size:12px;padding:10px 20px;">💬 WhatsApp</a>
+        </div>
+        <div>
+          <div class="footer-titre">Navigation</div>
+          <div class="footer-liens">
+            <a href="index.html">Accueil</a>
+            <a href="offres.html">Nos Offres</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="evenements.html">Événements</a>
+            <a href="a-propos.html">À Propos</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-titre">Services</div>
+          <div class="footer-liens">
+            <a href="offres.html#devis">Devis Gratuit</a>
+            <a href="suivi-commande.html">Suivi Commande</a>
+            <a href="contact.html#paiement">Mobile Money</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-titre">Contact</div>
+          <div class="footer-contact-info">
+            <p><span>📍</span> Cocody-Angré 8e Tranche, Abidjan</p>
+            <p><span>📞</span> +225 27 22 277 410</p>
+            <p><span>📱</span> +225 05 861 760 86</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bas">
+        <p class="footer-copyright">© 2026 TCHÈPE PRESTIGE – Produit <a href="a-propos.html">NAYAB GROUP</a>. Conçu par <a href="mailto:contact@w2k-digital.com">W2K-Digital</a>.</p>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250586176086?text=Bonjour%20TCHÈPE%20PRESTIGE%2C%20je%20souhaite%20commander" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Commander via WhatsApp">
+    <span class="whatsapp-float-icone">💬</span>
+    <span class="whatsapp-float-texte">Commander</span>
+  </a>
+  <div class="scroll-indicator" id="scrollIndicator">
+    <div class="scroll-dot"></div>
+    <span class="scroll-texte">Défilement auto</span>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auto-scroll.js"></script>
+  <script src="js/paiement.js"></script>
+</body>
+</html>
