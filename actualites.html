@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Actualités – Plats & Événements TCHÈPE PRESTIGE Abidjan</title>
+  <meta name="description" content="Découvrez les actualités TCHÈPE PRESTIGE : plats du moment, événements à venir, nouveautés tchèpe Abidjan. Traiteur premium en action.">
+  <link rel="canonical" href="https://www.tchepeprestige.com/actualites.html">
+  <meta property="og:title" content="Actualités Tchèpe – TCHÈPE PRESTIGE Abidjan">
+  <meta property="og:description" content="Plats phares, événements à venir et actualités du traiteur tchèpe n°1 à Abidjan.">
+  <meta property="og:url" content="https://www.tchepeprestige.com/actualites.html">
+  <link rel="icon" type="image/png" href="images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FB_PIXEL_ID --><!-- GA_MEASUREMENT_ID -->
+</head>
+<body data-next-page="contact.html">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo/logo-tchepeprestige.png" alt="Logo TCHÈPE PRESTIGE">
+        <span class="nav-logo-text">Tchèpe Prestige</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="offres.html" class="nav-link">Nos Offres</a></li>
+        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+        <li><a href="evenements.html" class="nav-link">Événements</a></li>
+        <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+        <li><a href="actualites.html" class="nav-link active">Actualités</a></li>
+        <li><a href="contact.html" class="btn-primary nav-cta">Commander</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <nav class="nav-drawer" id="navDrawer">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="offres.html" class="nav-link">Nos Offres</a>
+      <a href="entreprise.html" class="nav-link">Entreprise</a>
+      <a href="evenements.html" class="nav-link">Événements</a>
+      <a href="a-propos.html" class="nav-link">À Propos</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="actualites.html" class="nav-link active">Actualités</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn-primary" style="margin-top:16px;text-align:center;">Commander maintenant</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <span>Nos Actualités</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="background:var(--noir-3);">
+    <div class="page-hero-content">
+      <div class="separateur">
+        <div class="separateur-ligne"></div>
+        <span class="separateur-texte">Actualités</span>
+      </div>
+      <h1>Nos Actualités – Plats & Événements TCHÈPE PRESTIGE</h1>
+      <p style="color:var(--gris);margin-top:12px;max-width:600px;">Découvrez nos plats phares et événements à venir. Traiteur Abidjan en action.</p>
+    </div>
+  </div>
+
+  <!-- ACTUALITÉS DYNAMIQUES (Supabase) -->
+  <section class="section">
+    <div class="container">
+      <!-- Filtre par catégorie -->
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;" class="reveal" id="filtres">
+        <button class="btn-primary filtre-btn filtre-actif" data-cat="tous" style="font-size:12px;padding:10px 24px;">Tous</button>
+        <button class="btn-secondary filtre-btn" data-cat="plats" style="font-size:12px;padding:10px 24px;">Plats du moment</button>
+        <button class="btn-secondary filtre-btn" data-cat="evenements" style="font-size:12px;padding:10px 24px;">Événements à venir</button>
+      </div>
+
+      <!-- Loader -->
+      <div id="actualitesLoader" style="text-align:center;padding:40px;display:none;">
+        <p style="color:var(--gris);">Chargement des actualités...</p>
+      </div>
+
+      <!-- Grille actualités — remplie par JS (Supabase) ou fallback statique -->
+      <div class="actualites-grille" id="actualitesGrille">
+        <!-- Fallback statique (remplacé par JS si Supabase répond) -->
+        <article class="actualite-carte reveal reveal-delay-1" data-cat="plats">
+          <div class="actualite-img">
+            <picture>
+              <source srcset="images/actualites/plat-moment-1.webp" type="image/webp">
+              <img src="images/actualites/plat-moment-1.jpg" alt="Tchèpe Prestige avec poulet braisé" loading="lazy">
+            </picture>
+          </div>
+          <div class="actualite-body">
+            <div class="actualite-date">Avril 2026</div>
+            <h3 class="actualite-titre">Tchèpe Prestige du moment</h3>
+            <p class="actualite-texte">Avec poulet braisé et ignames pilés. Idéal tchèpe grande quantité — saveurs authentiques garanties.</p>
+          </div>
+        </article>
+        <article class="actualite-carte reveal reveal-delay-2" data-cat="evenements">
+          <div class="actualite-img">
+            <picture>
+              <source srcset="images/actualites/evenement-demo.webp" type="image/webp">
+              <img src="images/actualites/evenement-demo.jpg" alt="Démo tchèpe entreprise juin 2026" loading="lazy">
+            </picture>
+          </div>
+          <div class="actualite-body">
+            <div class="actualite-date">20 Juin 2026</div>
+            <h3 class="actualite-titre">Démo tchèpe entreprise – Cocody</h3>
+            <p class="actualite-texte">Démo tchèpe entreprise : 20 juin 2026, Cocody. Inscrivez-vous pour découvrir nos formules et déguster en avant-première.</p>
+          </div>
+        </article>
+        <article class="actualite-carte reveal reveal-delay-3" data-cat="evenements">
+          <div class="actualite-img" style="background:var(--noir-3);display:flex;align-items:center;justify-content:center;min-height:220px;">
+            <p style="color:var(--or);font-family:'Playfair Display',serif;font-size:20px;padding:20px;text-align:center;">Partenariat PME</p>
+          </div>
+          <div class="actualite-body">
+            <div class="actualite-date">En cours</div>
+            <h3 class="actualite-titre">Partenariat PME Abidjan</h3>
+            <p class="actualite-texte">Programme repas hebdomadaire pour 50+ équipes Abidjan. Contrats flexibles, qualité constante.</p>
+          </div>
+        </article>
+        <article class="actualite-carte reveal reveal-delay-1" data-cat="plats">
+          <div class="actualite-img" style="background:linear-gradient(135deg,var(--noir-2),var(--noir-3));display:flex;align-items:center;justify-content:center;min-height:220px;">
+            <p style="color:var(--or);font-family:'Playfair Display',serif;font-size:20px;padding:20px;text-align:center;">Forfaits Mariage 2026</p>
+          </div>
+          <div class="actualite-body">
+            <div class="actualite-date">2026</div>
+            <h3 class="actualite-titre">Spécial Événements : Forfaits mariage 2026</h3>
+            <p class="actualite-texte">Nouvelles formules mariage pour la saison 2026. Réservez tôt pour bénéficier des meilleures conditions.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Message si aucune actualité -->
+      <div id="noActualites" style="display:none;text-align:center;padding:60px 20px;">
+        <p style="color:var(--gris);font-size:16px;">Aucune actualité dans cette catégorie pour le moment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION NEWSLETTER / SUIVI -->
+  <section class="section section-alt">
+    <div class="container" style="max-width:640px;">
+      <div class="section-header center reveal">
+        <div class="separateur" style="justify-content:center">
+          <div class="separateur-ligne"></div>
+          <span class="separateur-texte">Suivez-nous</span>
+          <div class="separateur-ligne"></div>
+        </div>
+        <h2>Ne manquez rien</h2>
+        <p style="color:var(--gris);margin-top:12px;">Suivez-nous pour repas entreprise Abidjan frais et événements exclusifs.</p>
+      </div>
+      <div class="carte reveal" style="text-align:center;padding:40px;">
+        <p style="color:var(--gris);margin-bottom:24px;font-size:15px;">
+          Contactez-nous sur WhatsApp pour être informé des nouveaux plats, promotions et événements TCHÈPE PRESTIGE.
+        </p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="https://wa.me/2250586176086?text=Bonjour%2C%20je%20souhaite%20suivre%20les%20actualités%20TCHÈPE%20PRESTIGE" class="btn-primary" target="_blank" rel="noopener">
+            💬 Suivre sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-bande">
+    <div class="container">
+      <h2>Commander votre tchèpe Abidjan</h2>
+      <p>Plats du moment disponibles en thermos 5KG à 100KG.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="contact.html" class="btn-primary">Commander maintenant</a>
+        <a href="offres.html" class="btn-secondary">Voir les offres</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grille">
+        <div class="footer-brand">
+          <img src="images/logo/logo-tchepeprestige.png" alt="TCHÈPE PRESTIGE">
+          <p>Traiteur Abidjan leader du tchèpe grande quantité. L'excellence du tchèpe en grande capacité.</p>
+          <a href="https://wa.me/2250586176086" target="_blank" rel="noopener" class="btn-primary" style="font-size:12px;padding:10px 20px;">💬 WhatsApp</a>
+        </div>
+        <div>
+          <div class="footer-titre">Navigation</div>
+          <div class="footer-liens">
+            <a href="index.html">Accueil</a>
+            <a href="offres.html">Nos Offres</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="evenements.html">Événements</a>
+            <a href="a-propos.html">À Propos</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-titre">Services</div>
+          <div class="footer-liens">
+            <a href="offres.html#devis">Devis Gratuit</a>
+            <a href="suivi-commande.html">Suivi Commande</a>
+            <a href="contact.html#paiement">Mobile Money</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-titre">Contact</div>
+          <div class="footer-contact-info">
+            <p><span>📍</span> Cocody-Angré 8e Tranche, Abidjan</p>
+            <p><span>📞</span> +225 27 22 277 410</p>
+            <p><span>📱</span> +225 05 861 760 86</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bas">
+        <p class="footer-copyright">© 2026 TCHÈPE PRESTIGE – Produit <a href="a-propos.html">NAYAB GROUP</a>. Conçu par <a href="mailto:contact@w2k-digital.com">W2K-Digital</a>.</p>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250586176086?text=Bonjour%20TCHÈPE%20PRESTIGE%2C%20je%20souhaite%20commander" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Commander via WhatsApp">
+    <span class="whatsapp-float-icone">💬</span>
+    <span class="whatsapp-float-texte">Commander</span>
+  </a>
+  <div class="scroll-indicator" id="scrollIndicator">
+    <div class="scroll-dot"></div>
+    <span class="scroll-texte">Défilement auto</span>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auto-scroll.js"></script>
+</body>
+</html>
