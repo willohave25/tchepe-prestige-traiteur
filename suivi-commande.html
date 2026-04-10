@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suivi de Commande – TCHÈPE PRESTIGE Abidjan</title>
+  <meta name="description" content="Suivez votre commande tchèpe Abidjan en temps réel. Entrez votre numéro TCP-XXXX pour voir le statut de votre livraison.">
+  <link rel="canonical" href="https://www.tchepeprestige.com/suivi-commande.html">
+  <link rel="icon" type="image/png" href="images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FB_PIXEL_ID --><!-- GA_MEASUREMENT_ID -->
+</head>
+<body data-next-page="mentions-legales.html">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo/logo-tchepeprestige.png" alt="Logo TCHÈPE PRESTIGE">
+        <span class="nav-logo-text">Tchèpe Prestige</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="offres.html" class="nav-link">Nos Offres</a></li>
+        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+        <li><a href="evenements.html" class="nav-link">Événements</a></li>
+        <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+        <li><a href="actualites.html" class="nav-link">Actualités</a></li>
+        <li><a href="contact.html" class="btn-primary nav-cta">Commander</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <nav class="nav-drawer" id="navDrawer">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="offres.html" class="nav-link">Nos Offres</a>
+      <a href="entreprise.html" class="nav-link">Entreprise</a>
+      <a href="evenements.html" class="nav-link">Événements</a>
+      <a href="a-propos.html" class="nav-link">À Propos</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="actualites.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn-primary" style="margin-top:16px;text-align:center;">Commander maintenant</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <a href="contact.html">Contact</a>
+        <span>›</span>
+        <span>Suivi de commande</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero" style="background:var(--noir-3);">
+    <div class="page-hero-content">
+      <div class="separateur">
+        <div class="separateur-ligne"></div>
+        <span class="separateur-texte">Tracking</span>
+      </div>
+      <h1>Suivi de Commande</h1>
+      <p style="color:var(--gris);margin-top:12px;">Entrez votre numéro de commande pour suivre votre livraison en temps réel.</p>
+    </div>
+  </div>
+
+  <!-- FORMULAIRE DE SUIVI -->
+  <section class="section">
+    <div class="container" style="max-width:640px;">
+      <div class="calculateur reveal">
+        <div class="section-header center" style="margin-bottom:32px;">
+          <div class="separateur" style="justify-content:center">
+            <div class="separateur-ligne"></div>
+            <span class="separateur-texte">Votre commande</span>
+            <div class="separateur-ligne"></div>
+          </div>
+          <h2>Suivre ma commande</h2>
+          <p style="color:var(--gris);margin-top:8px;">Format : TCP-XXXX (ex: TCP-0042)</p>
+        </div>
+        <div style="display:flex;gap:12px;align-items:stretch;">
+          <input
+            type="text"
+            class="form-input"
+            id="numeroCommande"
+            placeholder="TCP-0042"
+            style="flex:1;text-transform:uppercase;letter-spacing:2px;font-size:18px;"
+            maxlength="10"
+          >
+          <button class="btn-primary" onclick="suivreCommande()" style="white-space:nowrap;">Suivre</button>
+        </div>
+        <div class="form-message" id="suiviMessage"></div>
+      </div>
+
+      <!-- RÉSULTAT TRACKING -->
+      <div id="suiviResultat" style="display:none;margin-top:32px;">
+        <div class="carte">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
+            <div>
+              <p style="color:var(--or);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Numéro de commande</p>
+              <h3 style="font-size:24px;" id="suiviNumero">TCP-0042</h3>
+            </div>
+            <div style="text-align:right;">
+              <p style="color:var(--gris);font-size:13px;margin-bottom:4px;">Date de commande</p>
+              <p style="color:var(--blanc);font-size:14px;" id="suiviDate">—</p>
+            </div>
+          </div>
+
+          <!-- Détails commande -->
+          <div style="background:var(--noir-3);padding:20px;margin-bottom:28px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div>
+                <p style="color:var(--gris);font-size:12px;text-transform:uppercase;letter-spacing:1px;">Client</p>
+                <p style="color:var(--blanc);font-size:14px;" id="suiviClient">—</p>
+              </div>
+              <div>
+                <p style="color:var(--gris);font-size:12px;text-transform:uppercase;letter-spacing:1px;">Thermos</p>
+                <p style="color:var(--or);font-size:14px;font-weight:600;" id="suiviThermos">—</p>
+              </div>
+              <div>
+                <p style="color:var(--gris);font-size:12px;text-transform:uppercase;letter-spacing:1px;">Montant</p>
+                <p style="color:var(--blanc);font-size:14px;" id="suiviMontant">—</p>
+              </div>
+              <div>
+                <p style="color:var(--gris);font-size:12px;text-transform:uppercase;letter-spacing:1px;">Livraison prévue</p>
+                <p style="color:var(--blanc);font-size:14px;" id="suiviDateLivraison">—</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMELINE STATUTS -->
+          <h4 style="margin-bottom:20px;color:var(--or);">Statut de votre commande</h4>
+          <div class="tracking-timeline" id="trackingTimeline">
+            <div class="tracking-etape" id="etape-recue">
+              <div class="tracking-icone">✓</div>
+              <div class="tracking-info">
+                <h4>Commande reçue</h4>
+                <p style="color:var(--gris);font-size:13px;">Votre commande a été enregistrée.</p>
+              </div>
+            </div>
+            <div class="tracking-etape" id="etape-paiement">
+              <div class="tracking-icone">💳</div>
+              <div class="tracking-info">
+                <h4>Paiement confirmé</h4>
+                <p style="color:var(--gris);font-size:13px;">Votre paiement a été vérifié.</p>
+              </div>
+            </div>
+            <div class="tracking-etape" id="etape-preparation">
+              <div class="tracking-icone">🍳</div>
+              <div class="tracking-info">
+                <h4>En préparation</h4>
+                <p style="color:var(--gris);font-size:13px;">Nos chefs préparent votre tchèpe.</p>
+              </div>
+            </div>
+            <div class="tracking-etape" id="etape-livraison">
+              <div class="tracking-icone">🚚</div>
+              <div class="tracking-info">
+                <h4>En livraison</h4>
+                <p style="color:var(--gris);font-size:13px;">Votre thermos est en route vers vous.</p>
+              </div>
+            </div>
+            <div class="tracking-etape" id="etape-livre">
+              <div class="tracking-icone">⭐</div>
+              <div class="tracking-info">
+                <h4>Livré</h4>
+                <p style="color:var(--gris);font-size:13px;">Votre commande a été livrée. Bon appétit !</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact si problème -->
+          <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--gris-bordure);">
+            <p style="color:var(--gris);font-size:13px;margin-bottom:12px;">Un problème avec votre livraison ?</p>
+            <a href="https://wa.me/2250586176086?text=Bonjour%2C%20problème%20avec%20ma%20commande" class="btn-secondary" style="font-size:12px;padding:10px 20px;" target="_blank" rel="noopener">
+              Contacter via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AIDE -->
+      <div class="carte reveal" style="margin-top:32px;">
+        <h4 style="margin-bottom:12px;">Où trouver mon numéro de commande ?</h4>
+        <p style="color:var(--gris);font-size:14px;line-height:1.7;">
+          Votre numéro de commande au format <strong style="color:var(--or);">TCP-XXXX</strong> vous a été communiqué par WhatsApp lors de la confirmation de votre commande. Si vous ne le retrouvez pas, contactez-nous directement.
+        </p>
+        <div style="margin-top:16px;">
+          <a href="https://wa.me/2250586176086?text=Bonjour%2C%20je%20cherche%20mon%20numéro%20de%20commande" class="btn-secondary" style="font-size:12px;padding:10px 20px;" target="_blank" rel="noopener">
+            Retrouver mon numéro
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-bande">
+    <div class="container">
+      <h2>Pas encore commandé ?</h2>
+      <p>Commandez votre tchèpe Abidjan maintenant — livraison rapide garantie.</p>
+      <div class="btn-group" style="justify-content:center;">
+        <a href="contact.html" class="btn-primary">Commander maintenant</a>
+        <a href="offres.html" class="btn-secondary">Voir les offres</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grille">
+        <div class="footer-brand">
+          <img src="images/logo/logo-tchepeprestige.png" alt="TCHÈPE PRESTIGE">
+          <p>Traiteur Abidjan leader du tchèpe grande quantité. L'excellence du tchèpe en grande capacité.</p>
+          <a href="https://wa.me/2250586176086" target="_blank" rel="noopener" class="btn-primary" style="font-size:12px;padding:10px 20px;">💬 WhatsApp</a>
+        </div>
+        <div>
+          <div class="footer-titre">Navigation</div>
+          <div class="footer-liens">
+            <a href="index.html">Accueil</a>
+            <a href="offres.html">Nos Offres</a>
+            <a href="contact.html">Commander</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-titre">Services</div>
+          <div class="footer-liens">
+            <a href="offres.html#devis">Devis Gratuit</a>
+            <a href="suivi-commande.html">Suivi Commande</a>
+            <a href="contact.html#paiement">Mobile Money</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-titre">Contact</div>
+          <div class="footer-contact-info">
+            <p><span>📍</span> Cocody-Angré 8e Tranche, Abidjan</p>
+            <p><span>📞</span> +225 27 22 277 410</p>
+            <p><span>📱</span> +225 05 861 760 86</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bas">
+        <p class="footer-copyright">© 2026 TCHÈPE PRESTIGE – Produit <a href="a-propos.html">NAYAB GROUP</a>. Conçu par <a href="mailto:contact@w2k-digital.com">W2K-Digital</a>.</p>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250586176086?text=Bonjour%20TCHÈPE%20PRESTIGE" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Commander via WhatsApp">
+    <span class="whatsapp-float-icone">💬</span>
+    <span class="whatsapp-float-texte">Commander</span>
+  </a>
+  <div class="scroll-indicator" id="scrollIndicator">
+    <div class="scroll-dot"></div>
+    <span class="scroll-texte">Défilement auto</span>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auto-scroll.js"></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>
