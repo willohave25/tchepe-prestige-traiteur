@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /tchepeprestige-admin/
+
+Sitemap: https://www.tchepeprestige.com/sitemap.xml
