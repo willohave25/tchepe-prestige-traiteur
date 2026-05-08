@@ -7,14 +7,14 @@
 
 /* Grille de tarification */
 const GRILLE_THERMOS = [
-  { max: 6,   kg:  5,   prix_premium:   6000 },
-  { max: 12,  kg: 10,   prix_premium:  12000 },
-  { max: 24,  kg: 20,   prix_premium:  24000 },
-  { max: 36,  kg: 30,   prix_premium:  36000 },
-  { max: 50,  kg: 40,   prix_premium:  50000 },
-  { max: 64,  kg: 50,   prix_premium:  64000 },
-  { max: 90,  kg: 70,   prix_premium:  90000 },
-  { max: 130, kg: 100,  prix_premium: 130000 },
+  { max: 20,  kg:  5,   prix_premium:  20000 },
+  { max: 40,  kg: 10,   prix_premium:  40000 },
+  { max: 80,  kg: 20,   prix_premium:  80000 },
+  { max: 120, kg: 30,   prix_premium: 120000 },
+  { max: 160, kg: 40,   prix_premium: 160000 },
+  { max: 200, kg: 50,   prix_premium: 200000 },
+  { max: 280, kg: 70,   prix_premium: 280000 },
+  { max: 400, kg: 100,  prix_premium: 400000 },
 ];
 
 const MULTIPLICATEUR_PRESTIGE = 1.30;
