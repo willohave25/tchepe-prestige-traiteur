@@ -170,7 +170,7 @@
       ]
     },
     conseils: {
-      msg: `Notre équipe est là pour vous conseiller 😊<br><br>Pour un projet sur mesure (mariage, entreprise, cantine), contactez-nous directement :<br>📱 <strong>+225 05 861 760 86</strong>`,
+      msg: `Notre équipe est là pour vous conseiller 😊<br><br>Pour un projet sur mesure (mariage, entreprise, cantine), contactez-nous directement :<br>📱 <strong>+225 07 174 290 10</strong>`,
       choix: [
         { label: 'Contacter sur WhatsApp', action: 'whatsapp_conseil' },
         { label: 'Voir les offres traiteur', href: 'offres.html' },
