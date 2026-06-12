@@ -120,7 +120,7 @@ function calculerDevis() {
       (dateVal ? `📅 Date : ${dateVal}\n` : '') +
       `💰 TOTAL ESTIMÉ : ${formatFCFA(totalFinal)}`
     );
-    btnWA.href = `https://wa.me/2250586176086?text=${texte}`;
+    btnWA.href = `https://wa.me/2250717429010?text=${texte}`;
   }
 
   // Scroll vers résultat
