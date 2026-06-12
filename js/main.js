@@ -235,7 +235,7 @@ function initFormCommande() {
           `📍 Zone : ${data.localisation}\n` +
           `🏠 Adresse : ${data.adresse || 'NC'}`
         );
-        window.open(`https://wa.me/2250586176086?text=${texte}`, '_blank');
+        window.open(`https://wa.me/2250717429010?text=${texte}`, '_blank');
       }, 1500);
 
     } catch (err) {
@@ -271,7 +271,7 @@ function envoyerWhatsapp() {
     (date ? `📅 Date : ${date}\n` : '') +
     (zone ? `📍 Zone : ${zone}\n` : '')
   );
-  window.open(`https://wa.me/2250586176086?text=${texte}`, '_blank');
+  window.open(`https://wa.me/2250717429010?text=${texte}`, '_blank');
 }
 
 /* ============================================
