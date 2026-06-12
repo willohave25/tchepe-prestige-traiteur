@@ -8,7 +8,7 @@
 (function () {
 
   /* ---- Configuration ---- */
-  const WA_NUMBER  = '2250586176086';
+  const WA_NUMBER  = '2250717429010';
   const WA_BASE    = `https://wa.me/${WA_NUMBER}?text=`;
   const BOT_NAME   = 'tchepePrestige';
   const BOT_AVATAR = '🤖';
