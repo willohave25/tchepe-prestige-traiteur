@@ -185,7 +185,7 @@ function telechargerDevis() {
 <div class="total">TOTAL ESTIMÉ : ${montant}</div>
 <p style="margin-top:16px;font-size:13px;color:#666;">
   Ce devis est indicatif. Paiement 50% à l'avance. Frais de livraison inclus.<br>
-  Pour confirmer : +225 05 861 760 86 | contact@tchepeprestige.com
+  Pour confirmer : +225 07 174 290 10 | contact@tchepeprestige.com
 </p>
 <div class="footer">
   TCHÈPE PRESTIGE – Produit NAYAB GROUP | RCCM CI-ABJ-2020-B-16133 | Cocody-Angré 8e Tranche, Abidjan
