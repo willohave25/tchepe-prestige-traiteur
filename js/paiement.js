@@ -6,7 +6,7 @@
 'use strict';
 
 const NUMERO_MARCHAND = '+225 05 861 760 86';
-const WA_NUMERO       = '2250586176086';
+const WA_NUMERO       = '2250717429010';
 
 /* Instructions par opérateur */
 const INSTRUCTIONS_MOBILE = {
